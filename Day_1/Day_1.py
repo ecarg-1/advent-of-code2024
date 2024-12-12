@@ -1,4 +1,5 @@
-with open("input_1_1.txt", "r") as file: #opening the input.txt into a variable "file" to be read only (hence the "r")
+#Part 1
+with open("input_1.txt", "r") as file: #opening the input.txt into a variable "file" to be read only (hence the "r")
     
     list1, list2 = [], [] #initializing lists to put each number into
  
@@ -15,3 +16,9 @@ total = 0 #starting off the total as 0
 for n1, n2 in zip(list1, list2): #zip zips puts together each list 
     total = total + abs(n1 - n2) #adds the difference to the total
 print(total)
+
+#Part 2
+score = 0 #starting the similarity score at 0 
+for num in list1: 
+    score = score + num*list2.count(num)
+print(score)
